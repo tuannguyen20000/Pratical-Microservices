@@ -16,7 +16,7 @@ namespace EventBus.Messages.RabbitMQ
     public class EventBusRabbitMQ : IEventBusRabbitMQ, IDisposable
     {
         private const string AUTOFAC_SCOPE_NAME = "EventBusRabbitMQ";
-        private readonly IRabbitMQPersistentConnection _persistentConnection;
+        private readonly IRabbitMQPersistenceConnection _persistentConnection;
         private readonly ILogger<EventBusRabbitMQ> _logger;
         private readonly IEventBusSubscriptionsManager _subsManager;
         private readonly ILifetimeScope _autofac;
@@ -26,7 +26,7 @@ namespace EventBus.Messages.RabbitMQ
         private readonly string _exchangetype;
         private readonly string _exchangeName;
 
-        public EventBusRabbitMQ(IRabbitMQPersistentConnection persistentConnection,
+        public EventBusRabbitMQ(IRabbitMQPersistenceConnection persistentConnection,
             ILogger<EventBusRabbitMQ> logger,
             ILifetimeScope autofac,
             IEventBusSubscriptionsManager subsManager,

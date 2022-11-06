@@ -12,18 +12,18 @@ using RabbitMQ.Client.Exceptions;
 
 namespace EventBus.Messages.RabbitMQ
 {
-    public class RabbitMQPersistentConnection : IRabbitMQPersistentConnection
+    public class RabbitMQPersistenceConnection : IRabbitMQPersistenceConnection
     {
         private readonly IConnectionFactory _connectionFactory;
-        private readonly ILogger<RabbitMQPersistentConnection> _logger;
+        private readonly ILogger<RabbitMQPersistenceConnection> _logger;
         private readonly int _retryCount;
         private IConnection _connection;
         private bool _disposed;
 
         private readonly object syncRoot = new object();
 
-        public RabbitMQPersistentConnection(IConnectionFactory connectionFactory,
-           ILogger<RabbitMQPersistentConnection> logger,
+        public RabbitMQPersistenceConnection(IConnectionFactory connectionFactory,
+           ILogger<RabbitMQPersistenceConnection> logger,
            int retryCount = 5)
         {
             _connectionFactory = connectionFactory;

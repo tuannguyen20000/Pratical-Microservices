@@ -16,7 +16,10 @@ try
 
     var app = builder.Build();
     app.UseInfrastructure();
-    app.MigrateDatabase<ProductContext>().Run();
+    app.MigrateDatabase<ProductContext>(async (context, _) =>
+    {
+        await ProductContextSeed.SeedProductAsync(context, Log.Logger);
+    }).Run();
 }
 catch (Exception ex)
 {

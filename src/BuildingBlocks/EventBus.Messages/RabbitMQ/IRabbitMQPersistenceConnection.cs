@@ -6,7 +6,7 @@ using RabbitMQ.Client;
 
 namespace EventBus.Messages.RabbitMQ
 {
-    public interface IRabbitMQPersistentConnection : IDisposable
+    public interface IRabbitMQPersistenceConnection : IDisposable
     {
         bool IsConnected { get; }
         bool TryConnect();
