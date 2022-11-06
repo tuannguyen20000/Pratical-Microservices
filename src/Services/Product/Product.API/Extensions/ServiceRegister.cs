@@ -3,7 +3,7 @@ using Infrastructure.Common;
 using Microsoft.EntityFrameworkCore;
 using MySql.Data.MySqlClient;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
-using Product.API.Presistence;
+using Product.API.Persistence;
 using Product.API.Repositories;
 using Product.API.Repositories.Interfaces;
 

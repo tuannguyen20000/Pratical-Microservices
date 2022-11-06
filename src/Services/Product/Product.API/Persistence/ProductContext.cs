@@ -2,7 +2,7 @@ using Contracts.Domains.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Product.API.Entities;
 
-namespace Product.API.Presistence;
+namespace Product.API.Persistence;
 
 public class ProductContext : DbContext
 {

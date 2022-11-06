@@ -1,6 +1,6 @@
 using Contracts.Common.Interfaces;
 using Product.API.Entities;
-using Product.API.Presistence;
+using Product.API.Persistence;
 
 namespace Product.API.Repositories.Interfaces;
 

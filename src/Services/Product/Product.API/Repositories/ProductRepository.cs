@@ -2,7 +2,7 @@ using Contracts.Common.Interfaces;
 using Infrastructure.Common;
 using Microsoft.EntityFrameworkCore;
 using Product.API.Entities;
-using Product.API.Presistence;
+using Product.API.Persistence;
 using Product.API.Repositories.Interfaces;
 
 namespace Product.API.Repositories;
